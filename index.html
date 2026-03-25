@@ -150,7 +150,7 @@
     }
 
     .wrap {
-      max-width: 1180px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 3rem 2rem 6rem;
     }
@@ -271,7 +271,7 @@
 
     .main-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 430px;
+      grid-template-columns: minmax(0, 1fr) 440px;
       gap: 20px;
       align-items: start;
       margin-bottom: 3rem;
@@ -814,6 +814,272 @@
       line-height: 1.6;
     }
 
+
+    .pro-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border: 1px solid var(--accent);
+      transition: transform .15s, box-shadow .15s, background .15s;
+      box-shadow: var(--shadow2);
+    }
+
+    .pro-cta:hover {
+      transform: translateY(-1px);
+      background: var(--accent2);
+    }
+
+    .pro-cta.ghost {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .pro-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .teaser-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, var(--surface), var(--bg2));
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 16px;
+      min-height: 120px;
+      box-shadow: var(--shadow);
+    }
+
+    .teaser-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(250,247,242,0.36);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      pointer-events: none;
+    }
+
+    [data-theme="dark"] .teaser-card::after {
+      background: rgba(16,14,11,0.32);
+    }
+
+    .teaser-lock {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 2;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 5px 8px;
+      box-shadow: var(--shadow2);
+    }
+
+    .teaser-top,
+    .teaser-lines,
+    .teaser-mini-grid,
+    .teaser-mini-bars {
+      position: relative;
+      z-index: 1;
+    }
+
+    .teaser-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .teaser-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .teaser-price {
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .blur-line {
+      height: 10px;
+      background: var(--border);
+      border-radius: 999px;
+      margin-bottom: 8px;
+      opacity: .95;
+    }
+
+    .blur-line.sm { width: 34%; }
+    .blur-line.md { width: 58%; }
+    .blur-line.lg { width: 78%; }
+    .blur-line.full { width: 100%; }
+
+    .teaser-mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .teaser-mini-box {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .teaser-mini-k {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .teaser-mini-v {
+      font-family: var(--mono);
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .teaser-mini-bars {
+      margin-top: 12px;
+      display: flex;
+      gap: 6px;
+      align-items: flex-end;
+      height: 48px;
+    }
+
+    .teaser-bar {
+      flex: 1;
+      border-radius: 8px 8px 4px 4px;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      opacity: .95;
+    }
+
+    .pro-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .pro-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .pro-card .tip-num {
+      margin-bottom: 8px;
+    }
+
+
+    .teaser-rich {
+      box-shadow: var(--shadow2);
+      border-color: var(--border2);
+    }
+
+    .teaser-rich.large {
+      min-height: 220px;
+    }
+
+    .teaser-blur-box {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .teaser-blur-box::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.22), rgba(255,255,255,0.06));
+      pointer-events: none;
+    }
+
+    .blur-text {
+      filter: blur(3.8px);
+      user-select: none;
+    }
+
+    .teaser-mini-grid.four {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teaser-lines.compact {
+      margin-top: 10px;
+    }
+
+    .pro-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    @media(max-width:860px){
+      .pro-preview-grid { grid-template-columns: 1fr; }
+    }
+
+    .pro-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 1.25rem;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      background: linear-gradient(135deg, var(--accent-bg), var(--surface));
+      box-shadow: var(--shadow);
+    }
+
+    .pro-banner-copy {
+      max-width: 700px;
+    }
+
+    .pro-banner-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .pro-banner-body {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .subtle-lock {
+      font-size: 12px;
+      margin-right: 6px;
+    }
+
     footer {
       margin-top: 4rem;
       padding-top: 2rem;
@@ -852,7 +1118,7 @@
     <div class="nav-right">
       <a class="nav-link" href="#calculator">Calculator</a>
       <a class="nav-link" href="#packages">Packages</a>
-      <a class="nav-link" href="#proposal">Proposal</a>
+      <a class="nav-link" href="#pro">Pro</a>
       <button class="theme-btn" onclick="window.print()">Save / Print</button>
       <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">Dark mode</button>
     </div>
@@ -863,8 +1129,7 @@
       <div class="hero-eyebrow">Freelancers only</div>
       <h1>The Freelance<br><em>Pricing</em> Calculator</h1>
       <p class="hero-sub">
-        Stop guessing what to charge. Pick your freelance service, choose the kind of client you want,
-        and get clear hourly, project, package, and retainer pricing.
+        Stop guessing what to charge. Pick your freelance service, choose your client type, and get a clean base rate for hourly, project, and package pricing.
       </p>
       <div class="hero-bar">
         <span class="hero-bar-label">Monthly income goal</span>
@@ -878,7 +1143,7 @@
     <section id="calculator">
       <div class="section-head">
         <span class="section-title">Choose your freelance setup</span>
-        <span class="section-sub">service + client type + pricing math</span>
+        <span class="section-sub">service + client type + base pricing</span>
       </div>
 
       <div class="main-grid">
@@ -991,23 +1256,6 @@
               </table>
             </div>
           </div>
-
-          <div class="panel">
-            <div class="panel-hdr">
-              <span class="panel-label">Income scenarios</span>
-            </div>
-            <div class="scenario-grid" id="scenarioGrid"></div>
-          </div>
-
-          <div class="panel">
-            <div class="panel-hdr">
-              <span class="panel-label">Client path by package</span>
-            </div>
-            <div class="chart-wrap">
-              <div class="chart-bar" id="clientChart"></div>
-              <div class="chart-legend" id="clientLegend"></div>
-            </div>
-          </div>
         </div>
 
         <div class="results">
@@ -1022,9 +1270,12 @@
 
           <div class="stat-grid" id="statGrid"></div>
 
-          <div id="biggestProblemBox"></div>
-          <div id="underchargeBox"></div>
-          <div id="positionBox"></div>
+          <div class="panel">
+            <div class="panel-hdr">
+              <span class="panel-label">Free tier note</span>
+            </div>
+            <div class="soft-box" id="freeTierNoteBox"></div>
+          </div>
 
           <div class="panel">
             <div class="panel-hdr">
@@ -1042,23 +1293,75 @@
 
           <div class="panel">
             <div class="panel-hdr">
-              <span class="panel-label">Retainer suggestion</span>
+              <span class="panel-label">Locked Pro previews</span>
             </div>
-            <div class="soft-box" id="retainerBox"></div>
-          </div>
+            <div class="pro-stack" id="sidebarProTeasers">
+              <div class="teaser-card teaser-rich">
+                <div class="teaser-lock">🔒 Unlock Pro</div>
+                <div class="teaser-top">
+                  <div class="teaser-label">Underpricing detector</div>
+                  <div class="teaser-price" id="teaserProtectedPrice">$1,450</div>
+                </div>
+                <div class="teaser-mini-grid">
+                  <div class="teaser-mini-box">
+                    <div class="teaser-mini-k">Base</div>
+                    <div class="teaser-mini-v" id="teaserBasePrice">$1,050</div>
+                  </div>
+                  <div class="teaser-mini-box teaser-blur-box">
+                    <div class="teaser-mini-k">Protected</div>
+                    <div class="teaser-mini-v blur-text" id="teaserBlurProtected">$1,450</div>
+                  </div>
+                </div>
+                <div class="teaser-lines compact">
+                  <div class="blur-line full"></div>
+                  <div class="blur-line md"></div>
+                </div>
+              </div>
 
-          <div class="panel">
-            <div class="panel-hdr">
-              <span class="panel-label">Budget fit</span>
-            </div>
-            <div id="budgetFitBox"></div>
-          </div>
+              <div class="teaser-card teaser-rich">
+                <div class="teaser-lock">🔒 Unlock Pro</div>
+                <div class="teaser-top">
+                  <div class="teaser-label">Client risk + scope</div>
+                  <div class="teaser-price" id="teaserRiskDelta">+18%</div>
+                </div>
+                <div class="teaser-mini-grid four" id="teaserRiskGrid">
+                  <div class="teaser-mini-box">
+                    <div class="teaser-mini-k">Easy</div>
+                    <div class="teaser-mini-v">$780</div>
+                  </div>
+                  <div class="teaser-mini-box teaser-blur-box">
+                    <div class="teaser-mini-k">Difficult</div>
+                    <div class="teaser-mini-v blur-text">$1,120</div>
+                  </div>
+                  <div class="teaser-mini-box">
+                    <div class="teaser-mini-k">Tight</div>
+                    <div class="teaser-mini-v">0%</div>
+                  </div>
+                  <div class="teaser-mini-box teaser-blur-box">
+                    <div class="teaser-mini-k">Messy</div>
+                    <div class="teaser-mini-v blur-text">+16%</div>
+                  </div>
+                </div>
+              </div>
 
-          <div class="panel">
-            <div class="panel-hdr">
-              <span class="panel-label">Price confidence meter</span>
+              <div class="teaser-card teaser-rich">
+                <div class="teaser-lock">🔒 Unlock Pro</div>
+                <div class="teaser-top">
+                  <div class="teaser-label">Retainer + proposal</div>
+                  <div class="teaser-price" id="teaserRetainer">$900/mo</div>
+                </div>
+                <div class="teaser-mini-bars" id="teaserBars">
+                  <div class="teaser-bar" style="height:35%"></div>
+                  <div class="teaser-bar" style="height:58%"></div>
+                  <div class="teaser-bar" style="height:82%"></div>
+                  <div class="teaser-bar" style="height:70%"></div>
+                </div>
+                <div class="teaser-lines" style="margin-top:12px;">
+                  <div class="blur-line full"></div>
+                  <div class="blur-line sm"></div>
+                </div>
+              </div>
             </div>
-            <div id="confidenceBox"></div>
           </div>
         </div>
       </div>
@@ -1077,20 +1380,113 @@
 
     <div class="divider"></div>
 
-    <section id="proposal">
+    <section id="pro">
       <div class="section-head">
-        <span class="section-title">Proposal text generator</span>
-        <span class="section-sub">copy and send</span>
+        <span class="section-title">What Pro adds</span>
+        <span class="section-sub">deeper pricing confidence</span>
       </div>
 
-      <div class="panel">
-        <div class="panel-hdr">
-          <span class="panel-label">Ready-to-use pricing text</span>
-          <button class="mini-btn" onclick="copyProposal()">Copy proposal text</button>
+      <div class="pro-preview-grid" id="mainProPreviewGrid">
+        <div class="teaser-card teaser-rich large">
+          <div class="teaser-lock">🔒 Pro preview</div>
+          <div class="teaser-top">
+            <div class="teaser-label">Smarter quote</div>
+            <div class="teaser-price" id="mainTeaserQuote">$2,400</div>
+          </div>
+          <div class="teaser-lines">
+            <div class="blur-line lg"></div>
+            <div class="blur-line full"></div>
+            <div class="blur-line md"></div>
+          </div>
+          <div class="teaser-mini-grid">
+            <div class="teaser-mini-box">
+              <div class="teaser-mini-k">Base</div>
+              <div class="teaser-mini-v" id="mainTeaserBase">$1,850</div>
+            </div>
+            <div class="teaser-mini-box teaser-blur-box">
+              <div class="teaser-mini-k">Protected</div>
+              <div class="teaser-mini-v blur-text" id="mainTeaserProtected">$2,400</div>
+            </div>
+          </div>
         </div>
-        <textarea id="proposalText" class="textarea" readonly></textarea>
-        <div class="small-note">
-          This updates automatically based on your selected service and pricing.
+
+        <div class="teaser-card teaser-rich large">
+          <div class="teaser-lock">🔒 Pro preview</div>
+          <div class="teaser-top">
+            <div class="teaser-label">Risk + scope view</div>
+            <div class="teaser-price" id="mainTeaserLocked">Locked</div>
+          </div>
+          <div class="teaser-mini-grid four" id="mainTeaserRiskGrid">
+            <div class="teaser-mini-box">
+              <div class="teaser-mini-k">Normal</div>
+              <div class="teaser-mini-v">$980</div>
+            </div>
+            <div class="teaser-mini-box teaser-blur-box">
+              <div class="teaser-mini-k">Messy</div>
+              <div class="teaser-mini-v blur-text">$1,340</div>
+            </div>
+            <div class="teaser-mini-box">
+              <div class="teaser-mini-k">Safe</div>
+              <div class="teaser-mini-v">92%</div>
+            </div>
+            <div class="teaser-mini-box teaser-blur-box">
+              <div class="teaser-mini-k">Premium</div>
+              <div class="teaser-mini-v blur-text">112%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="teaser-card teaser-rich large">
+          <div class="teaser-lock">🔒 Pro preview</div>
+          <div class="teaser-top">
+            <div class="teaser-label">Retainer + proposal</div>
+            <div class="teaser-price" id="mainTeaserRetainer">$1,200</div>
+          </div>
+          <div class="teaser-mini-bars" id="mainTeaserBars">
+            <div class="teaser-bar" style="height:24%"></div>
+            <div class="teaser-bar" style="height:42%"></div>
+            <div class="teaser-bar" style="height:68%"></div>
+            <div class="teaser-bar" style="height:86%"></div>
+          </div>
+          <div class="teaser-lines" style="margin-top:12px;">
+            <div class="blur-line full"></div>
+            <div class="blur-line sm"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-feature-grid">
+        <div class="pro-card">
+          <div class="tip-num">Pro 01</div>
+          <div class="tip-title">Underpricing detector</div>
+          <div class="tip-body">See whether your quote is sitting too close to your survival floor before you send it to a client.</div>
+        </div>
+        <div class="pro-card">
+          <div class="tip-num">Pro 02</div>
+          <div class="tip-title">Client risk adjustment</div>
+          <div class="tip-body">Model easy, normal, difficult, and nightmare clients so your quote reflects real-world friction and hidden labor.</div>
+        </div>
+        <div class="pro-card">
+          <div class="tip-num">Pro 03</div>
+          <div class="tip-title">Scope creep protection</div>
+          <div class="tip-body">Build in realistic protection for messy projects, vague deliverables, and over-revision habits before they eat your margin.</div>
+        </div>
+        <div class="pro-card">
+          <div class="tip-num">Pro 04</div>
+          <div class="tip-title">Retainer and proposal tools</div>
+          <div class="tip-body">Get stronger retainer numbers, package framing, proposal-ready wording, and cleaner client-facing quote options.</div>
+        </div>
+      </div>
+
+      <div class="pro-banner">
+        <div class="pro-banner-copy">
+          <div class="pro-banner-title">Unlock the full quote engine</div>
+          <div class="pro-banner-body">
+            The free version gives you a strong starting point. Pro turns that into the safer number you actually send with client difficulty, scope protection, proposal framing, retainers, and more realistic decision-level pricing.
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+          <a class="pro-cta" id="stripeBuyBtn" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" target="_blank" rel="noopener noreferrer">Unlock Pro — $9</a>
         </div>
       </div>
     </section>
@@ -1128,7 +1524,7 @@
 
     <footer>
       <div>Freelance Pricing Calculator · Built to help freelancers stop undercharging.</div>
-      <div style="margin-top:.5rem">Use this number in your next proposal.</div>
+      <div style="margin-top:.5rem">Use this as your base pricing starting point.</div>
     </footer>
   </div>
 
@@ -1277,7 +1673,6 @@
     const RESULT_MODES = [
       { id: 'project', label: 'Project' },
       { id: 'hourly', label: 'Hourly' },
-      { id: 'retainer', label: 'Retainer' },
       { id: 'packages', label: 'Packages' }
     ];
 
@@ -1397,11 +1792,6 @@
       navigator.clipboard.writeText(text);
     }
 
-    function copyProposal(){
-      const text = document.getElementById('proposalText').value;
-      copyText(text);
-    }
-
     function flashCopyButton(button){
       const original = button.textContent;
       button.textContent = 'Copied';
@@ -1423,7 +1813,7 @@
           <div class="package-desc">${desc}</div>
           <div class="package-actions">
             <button class="copy-btn" onclick="copyPackagePrice('${name}', ${Math.round(price)}, this)">Copy price</button>
-            <button class="copy-btn" onclick="copyPackageLine('${name}', ${Math.round(price)})">Copy line</button>
+            <button class="copy-btn" onclick="copyPackageLine('${name}', ${Math.round(price)}, this)">Copy line</button>
           </div>
         </div>
       `;
@@ -1434,8 +1824,9 @@
       flashCopyButton(btn);
     }
 
-    function copyPackageLine(name, price){
+    function copyPackageLine(name, price, btn){
       copyText(`${name} — ${fmtMoney(price)}`);
+      if(btn) flashCopyButton(btn);
     }
 
     function update(){
@@ -1498,10 +1889,6 @@
         resultLabel = 'Recommended hourly rate';
         resultValue = fmtMoney(recommendedHourly);
         resultSub = `${activeService.name} · sustainable floor ${fmtMoney(sustainableHourly)} · day rate ${fmtMoney(dayRate)}`;
-      } else if(activeMode === 'retainer'){
-        resultLabel = 'Suggested monthly retainer';
-        resultValue = fmtMoney(retainerEquivalent);
-        resultSub = `${activeService.name} · one recurring client · built from your project pricing`;
       } else if(activeMode === 'packages'){
         resultLabel = 'Recommended package tier';
         resultValue = fmtMoney(standardPackage);
@@ -1520,22 +1907,22 @@
           c:'var(--amber)'
         },
         {
-          l:'Recommended hourly',
+          l:'Base hourly',
           v:fmtMoney(recommendedHourly),
-          s:'client-facing rate',
+          s:'starting quote point',
           c:'var(--accent)'
+        },
+        {
+          l:'Base project',
+          v:fmtMoney(recommendedProject),
+          s:'before client complexity',
+          c:'var(--text)'
         },
         {
           l:'Protected monthly target',
           v:fmtMoney(revisionProtectedRevenue),
           s:'goal + costs + buffers',
           c:'var(--green)'
-        },
-        {
-          l:'Recommended project',
-          v:fmtMoney(recommendedProject),
-          s:'based on your inputs',
-          c:'var(--text)'
         }
       ].map(s => `
         <div class="stat">
@@ -1555,11 +1942,9 @@
         ['Revision / hassle buffer', fmtPct(revisionRisk * 100)],
         ['Working hours per month', monthlyHours + ' hrs'],
         ['Minimum hourly floor', fmtMoney(minimumHourly)],
-        ['Sustainable hourly', fmtMoney(sustainableHourly)],
-        ['Recommended hourly', fmtMoney(recommendedHourly)],
+        ['Base hourly', fmtMoney(recommendedHourly)],
         ['Project hours used', hoursPerProject + ' hrs'],
-        ['Recommended project price', fmtMoney(recommendedProject)],
-        ['Suggested day rate', fmtMoney(dayRate)]
+        ['Base project price', fmtMoney(recommendedProject)]
       ].map(row => `
         <tr>
           <td>${row[0]}</td>
@@ -1573,106 +1958,6 @@
         createPackageCard('Premium', premiumPackage, activeService.premium, false)
       ].join('');
 
-      document.getElementById('scenarioGrid').innerHTML = [
-        {
-          name: 'At your target project count',
-          price: monthlyRevenueAtRecommended,
-          desc: `${monthlyClients} projects per month at your recommended price`
-        },
-        {
-          name: 'At full time capacity',
-          price: monthlyRevenueAtCapacity,
-          desc: `${maxProjectsByTime} projects per month based on your current hours`
-        },
-        {
-          name: 'Monthly goal checkpoint',
-          price: incomeGoal,
-          desc: `Your original monthly income goal before buffers`
-        }
-      ].map(s => `
-        <div class="scenario-card">
-          <div class="scenario-top">
-            <div class="scenario-name">${s.name}</div>
-            <div class="scenario-price">${fmtMoney(s.price)}</div>
-          </div>
-          <div class="scenario-desc">${s.desc}</div>
-        </div>
-      `).join('');
-
-      let biggestProblemHTML = '';
-      const hoursMismatch = monthlyHours < 60;
-      const revisionHigh = revisionRisk >= 0.15;
-      const lowBudget = clientType <= 0.9;
-
-      if(hoursMismatch){
-        biggestProblemHTML = `
-          <div class="blue-box">
-            Biggest constraint: your billable hours are low for this income goal. You either need more capacity, a higher rate, or a smaller number of higher-paying clients.
-          </div>
-        `;
-      } else if(lowBudget){
-        biggestProblemHTML = `
-          <div class="blue-box">
-            Biggest constraint: your client type is pulling your pricing down. Better clients would likely move your income faster than simply taking on more work.
-          </div>
-        `;
-      } else if(revisionHigh){
-        biggestProblemHTML = `
-          <div class="blue-box">
-            Biggest constraint: your revision / hassle buffer is eating into clean pricing. Tightening scope and revision terms would immediately improve your pricing structure.
-          </div>
-        `;
-      } else {
-        biggestProblemHTML = `
-          <div class="blue-box">
-            Biggest lever: your pricing foundation is decent. The next jump likely comes from stronger positioning, clearer packages, and more confident selling.
-          </div>
-        `;
-      }
-      document.getElementById('biggestProblemBox').innerHTML = biggestProblemHTML;
-
-      let underchargeHTML = '';
-      if (underchargePercent >= 25) {
-        underchargeHTML = `
-          <div class="warning-box">
-            You may be undercharging hard. Your bare minimum is ${fmtMoney(minimumHourly)}/hr,
-            but your recommended rate is ${fmtMoney(recommendedHourly)}/hr.
-            Charging only your minimum leaves very little room for revisions, stress, bad clients, or unexpected costs.
-          </div>
-        `;
-      } else {
-        underchargeHTML = `
-          <div class="info-box">
-            Your pricing gap looks healthier. Your minimum is ${fmtMoney(minimumHourly)}/hr,
-            and your recommended rate gives you more breathing room to work like a professional, not just survive.
-          </div>
-        `;
-      }
-      document.getElementById('underchargeBox').innerHTML = underchargeHTML;
-
-      let positionHTML = '';
-      if (recommendedHourly < 35) {
-        positionHTML = `
-          <div class="warning-box">
-            This result is still fairly low. To charge more, raise your positioning, work with better clients,
-            reduce low-value work, or make your packages feel more premium.
-          </div>
-        `;
-      } else if (recommendedHourly < 80) {
-        positionHTML = `
-          <div class="info-box">
-            This is a solid freelance range. You are no longer guessing — now the job is presenting this price with confidence and a clean offer.
-          </div>
-        `;
-      } else {
-        positionHTML = `
-          <div class="info-box">
-            You are in premium freelance territory. At this level, your brand, process, and communication should feel polished enough to justify the rate.
-          </div>
-        `;
-      }
-      document.getElementById('positionBox').innerHTML = positionHTML;
-
       document.getElementById('clientsNeededGrid').innerHTML = `
         <div class="mini-card">
           <div class="mini-k">Starter path</div>
@@ -1682,9 +1967,9 @@
           <div class="mini-k">Standard path</div>
           <div class="mini-v">${clientsAtStandard}</div>
         </div>
-        <div class="mini-card">
-          <div class="mini-k">Premium path</div>
-          <div class="mini-v">${clientsAtPremium}</div>
+        <div class="mini-card" style="position:relative;overflow:hidden;">
+          <div class="mini-k"><span class="subtle-lock">🔒</span>Pro smarter target</div>
+          <div class="mini-v" style="filter: blur(3px); user-select:none;">${Math.max(1, Math.ceil(clientsAtStandard * 0.8))}</div>
         </div>
         <div class="mini-card">
           <div class="mini-k">Current target</div>
@@ -1705,105 +1990,89 @@
           <div class="mini-k">Suggested day rate</div>
           <div class="mini-v">${fmtMoney(dayRate)}</div>
         </div>
-        <div class="mini-card">
-          <div class="mini-k">Revenue at target count</div>
-          <div class="mini-v">${fmtMoney(monthlyRevenueAtRecommended)}</div>
+        <div class="mini-card" style="position:relative;overflow:hidden;">
+          <div class="mini-k"><span class="subtle-lock">🔒</span>Pro capacity insight</div>
+          <div class="mini-v" style="filter: blur(3px); user-select:none;">${fmtMoney(monthlyRevenueAtCapacity * 1.12)}</div>
         </div>
       `;
 
-      document.getElementById('retainerBox').innerHTML = `
-        A strong monthly retainer for this setup would start around
-        <strong>${fmtMoney(retainerEquivalent)}</strong> per month for one consistent client.
-        That gives you recurring income without needing to resell the same project every single time.
-      `;
+      document.getElementById('freeTierNoteBox').innerHTML = `
+        This free version gives you a <strong>clean base rate</strong> — not the full decision layer. Your final quote still depends on client difficulty, scope creep, revision pressure, positioning, and how polished you want the offer to feel. <br><br><span class="subtle-lock">🔒</span>Pro unlocks the safer number freelancers actually send.`;
 
-      let budgetFitText = '';
-      if (clientType <= 0.9) {
-        budgetFitText = `
-          <div class="warning-box">
-            ${activeBudgetPreset.name} clients are more price-sensitive. Keep your scope tight, reduce revision creep, and avoid overdelivering for free.
-          </div>
-        `;
-      } else if (clientType <= 1.0) {
-        budgetFitText = `
-          <div class="soft-box">
-            ${activeBudgetPreset.name} clients can work well when your offer is clean and practical. Focus on clear outcomes and easy-to-understand packages.
-          </div>
-        `;
-      } else if (clientType <= 1.2) {
-        budgetFitText = `
-          <div class="info-box">
-            ${activeBudgetPreset.name} clients are a strong fit for value-based pricing. They are more likely to pay for quality, reliability, and polish.
-          </div>
-        `;
-      } else {
-        budgetFitText = `
-          <div class="info-box">
-            ${activeBudgetPreset.name} clients can support premium pricing, but they will expect confidence, process, communication, and a very polished delivery experience.
-          </div>
-        `;
-      }
-      document.getElementById('budgetFitBox').innerHTML = budgetFitText;
+      const protectedProject = Math.round(recommendedProject * (1.12 + (revisionRisk * 0.35)));
+      const easyProject = Math.round(recommendedProject * 0.96);
+      const difficultProject = Math.round(recommendedProject * 1.16);
+      const messyScopeProject = Math.round(recommendedProject * 1.18);
+      const protectedRetainer = Math.round((recommendedHourly * Math.max(6, Math.round(hoursPerProject * 0.7))) * 0.96);
 
-      let confidenceText = '';
-      if (confidenceScore < 45) {
-        confidenceText = `
-          <div class="warning-box">
-            Confidence score: <strong>${confidenceScore}/100</strong><br>
-            Your setup still leans fragile. Your pricing may be mathematically valid, but it likely needs stronger positioning, better clients, or tighter scope.
-          </div>
-        `;
-      } else if (confidenceScore < 75) {
-        confidenceText = `
-          <div class="soft-box">
-            Confidence score: <strong>${confidenceScore}/100</strong><br>
-            This is a reasonable freelance offer. You are in a healthy middle zone where better branding and better client selection can lift your rates further.
-          </div>
-        `;
-      } else {
-        confidenceText = `
-          <div class="info-box">
-            Confidence score: <strong>${confidenceScore}/100</strong><br>
-            Your pricing looks strong and well-protected. This is the kind of setup that can support premium positioning if your work and communication match it.
-          </div>
-        `;
-      }
-      document.getElementById('confidenceBox').innerHTML = confidenceText;
+      const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if(el) el.textContent = value;
+      };
+      const setHTML = (id, value) => {
+        const el = document.getElementById(id);
+        if(el) el.innerHTML = value;
+      };
 
-      const totalClientsForChart = clientsAtStarter + clientsAtStandard + clientsAtPremium || 1;
-      const starterPct = (clientsAtStarter / totalClientsForChart) * 100;
-      const standardPct = (clientsAtStandard / totalClientsForChart) * 100;
-      const premiumPct = (clientsAtPremium / totalClientsForChart) * 100;
+      setText('teaserProtectedPrice', fmtMoney(protectedProject));
+      setText('teaserBasePrice', fmtMoney(recommendedProject));
+      setText('teaserBlurProtected', fmtMoney(protectedProject));
+      setText('teaserRiskDelta', '+' + Math.round(((difficultProject / Math.max(1, easyProject)) - 1) * 100) + '%');
+      setHTML('teaserRiskGrid', `
+        <div class="teaser-mini-box">
+          <div class="teaser-mini-k">Easy</div>
+          <div class="teaser-mini-v">${fmtMoney(easyProject)}</div>
+        </div>
+        <div class="teaser-mini-box teaser-blur-box">
+          <div class="teaser-mini-k">Difficult</div>
+          <div class="teaser-mini-v blur-text">${fmtMoney(difficultProject)}</div>
+        </div>
+        <div class="teaser-mini-box">
+          <div class="teaser-mini-k">Tight</div>
+          <div class="teaser-mini-v">+0%</div>
+        </div>
+        <div class="teaser-mini-box teaser-blur-box">
+          <div class="teaser-mini-k">Messy</div>
+          <div class="teaser-mini-v blur-text">+${Math.max(12, Math.round(revisionRisk*100 + 8))}%</div>
+        </div>
+      `);
+      setText('teaserRetainer', fmtMoney(protectedRetainer) + '/mo');
+      setHTML('teaserBars', `
+        <div class="teaser-bar" style="height:${Math.max(26, Math.min(90, Math.round((starterPackage / premiumPackage) * 78)))}%"></div>
+        <div class="teaser-bar" style="height:${Math.max(40, Math.min(92, Math.round((standardPackage / premiumPackage) * 88)))}%"></div>
+        <div class="teaser-bar" style="height:${Math.max(62, Math.min(96, Math.round((premiumPackage / premiumPackage) * 92)))}%"></div>
+        <div class="teaser-bar" style="height:${Math.max(48, Math.min(94, Math.round((protectedRetainer / Math.max(1, premiumPackage)) * 88)))}%"></div>
+      `);
 
-      document.getElementById('clientChart').innerHTML = `
-        <div class="chart-seg" style="width:${starterPct}%;background:var(--amber)">${starterPct > 16 ? 'Starter' : ''}</div>
-        <div class="chart-seg" style="width:${standardPct}%;background:var(--accent)">${standardPct > 16 ? 'Standard' : ''}</div>
-        <div class="chart-seg" style="width:${premiumPct}%;background:var(--green)">${premiumPct > 16 ? 'Premium' : ''}</div>
-      `;
+      setText('mainTeaserQuote', fmtMoney(protectedProject));
+      setText('mainTeaserBase', fmtMoney(recommendedProject));
+      setText('mainTeaserProtected', fmtMoney(protectedProject));
+      setText('mainTeaserRetainer', fmtMoney(protectedRetainer));
+      setHTML('mainTeaserRiskGrid', `
+        <div class="teaser-mini-box">
+          <div class="teaser-mini-k">Normal</div>
+          <div class="teaser-mini-v">${fmtMoney(recommendedProject)}</div>
+        </div>
+        <div class="teaser-mini-box teaser-blur-box">
+          <div class="teaser-mini-k">Messy</div>
+          <div class="teaser-mini-v blur-text">${fmtMoney(messyScopeProject)}</div>
+        </div>
+        <div class="teaser-mini-box">
+          <div class="teaser-mini-k">Safe</div>
+          <div class="teaser-mini-v">96%</div>
+        </div>
+        <div class="teaser-mini-box teaser-blur-box">
+          <div class="teaser-mini-k">Premium</div>
+          <div class="teaser-mini-v blur-text">112%</div>
+        </div>
+      `);
+      setHTML('mainTeaserBars', `
+        <div class="teaser-bar" style="height:${Math.max(24, Math.min(90, Math.round((starterPackage / premiumPackage) * 72)))}%"></div>
+        <div class="teaser-bar" style="height:${Math.max(38, Math.min(92, Math.round((standardPackage / premiumPackage) * 84)))}%"></div>
+        <div class="teaser-bar" style="height:88%"></div>
+        <div class="teaser-bar" style="height:${Math.max(52, Math.min(94, Math.round((protectedRetainer / Math.max(1, premiumPackage)) * 86)))}%"></div>
+      `);
 
-      document.getElementById('clientLegend').innerHTML = `
-        <div class="legend-item"><span class="legend-dot" style="background:var(--amber)"></span>Starter path — ${clientsAtStarter} clients</div>
-        <div class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span>Standard path — ${clientsAtStandard} clients</div>
-        <div class="legend-item"><span class="legend-dot" style="background:var(--green)"></span>Premium path — ${clientsAtPremium} clients</div>
-      `;
-
-      document.getElementById('proposalText').value =
-`Hi — based on the scope we discussed for ${activeService.name.toLowerCase()}, my recommended pricing would be:
-
-Starter: ${fmtMoney(starterPackage)}
-Standard: ${fmtMoney(standardPackage)}
-Premium: ${fmtMoney(premiumPackage)}
-
-For this project, my standard recommendation would be ${fmtMoney(standardPackage)}.
-
-That price reflects the estimated time involved, the creative/technical work required, revisions, and the overall quality of delivery.
-
-If you'd like, I can also offer this as:
-• a one-time project at ${fmtMoney(recommendedProject)}
-• a day rate at ${fmtMoney(dayRate)}
-• or an ongoing monthly retainer starting at ${fmtMoney(retainerEquivalent)}
-
-Let me know which option fits best and I can tailor the scope for you.`;
     }
 
     renderServices();
