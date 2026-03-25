@@ -1080,6 +1080,35 @@
       margin-right: 6px;
     }
 
+
+    .stripe-inline-wrap {
+      display:flex;
+      justify-content:center;
+      margin-top: 1rem;
+    }
+
+    .hero-pro-note {
+      text-align:center;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 1rem;
+      letter-spacing: .04em;
+    }
+
+    .pro-banner-cta {
+      display:grid;
+      gap:10px;
+      justify-items:end;
+    }
+
+    @media(max-width:860px){
+      .pro-banner-cta {
+        justify-items:start;
+        width:100%;
+      }
+    }
+
     footer {
       margin-top: 4rem;
       padding-top: 2rem;
@@ -1111,6 +1140,8 @@
       .divider { margin: 1.5rem 0; }
     }
   </style>
+
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
   <nav>
@@ -1138,6 +1169,8 @@
           <input id="incomeGoalTop" class="money-input" type="text" value="6,000" oninput="syncIncomeGoal(this)" onblur="formatMoneyInput(this)">
         </div>
       </div>
+      <div class="hero-pro-note">One-time access · No subscription · Unlock the full Pro quote engine</div>
+
     </header>
 
     <section id="calculator">
@@ -1294,6 +1327,9 @@
           <div class="panel">
             <div class="panel-hdr">
               <span class="panel-label">Locked Pro previews</span>
+            </div>
+            <div class="small-note" style="margin-top:-4px; margin-bottom:12px;">
+              Want the protected number, proposal framing, and retainer logic? Unlock Pro below.
             </div>
             <div class="pro-stack" id="sidebarProTeasers">
               <div class="teaser-card teaser-rich">
@@ -1482,11 +1518,16 @@
         <div class="pro-banner-copy">
           <div class="pro-banner-title">Unlock the full quote engine</div>
           <div class="pro-banner-body">
-            The free version gives you a strong starting point. Pro turns that into the safer number you actually send with client difficulty, scope protection, proposal framing, retainers, and more realistic decision-level pricing.
+            The free version gives you a strong starting point. Pro upgrades that into the safer number you actually send with client difficulty, scope protection, proposal framing, retainer pricing, and more realistic decision-level quote logic.
           </div>
         </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
-          <a class="pro-cta" id="stripeBuyBtn" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" target="_blank" rel="noopener noreferrer">Unlock Pro — $9</a>
+        <div class="pro-banner-cta">
+          <div class="hero-pro-note" style="margin-top:0;">One-time purchase · Instant access</div>
+          <stripe-buy-button
+            buy-button-id="buy_btn_1TEjy05C7NUdptXthquomB2r"
+            publishable-key="pk_live_51TCvyI5C7NUdptXt5hLz5Y0IiPkfJ9uqZeW1RgclG7VBtztdtLCiESwoDZSN9lUxZSwVy0zoH1kTSVWJXcSW8U5A00SWlrFP9N"
+          >
+          </stripe-buy-button>
         </div>
       </div>
     </section>
